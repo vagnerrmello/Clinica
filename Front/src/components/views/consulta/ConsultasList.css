@@ -1,0 +1,96 @@
+.consultas-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.criar-consulta-button {
+  display: block;
+  margin: 10px 0;
+  padding: 2px 20px;
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+}
+
+.criar-consulta-button:hover {
+  background-color: #45a049;
+}
+
+.consultas-table th,
+.consultas-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.consultas-table th {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.consultas-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.consultas-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Ajuste o espaço entre os elementos conforme necessário */
+  margin-bottom: 20px; /* Espaço abaixo da seção de filtros */
+}
+
+.filters input,
+.filters select {
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.filters button {
+  padding: 10px 15px; /* Ajuste o padding para o tamanho desejado do botão */
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #45a049;
+}
+
+.cancelar-consulta-button {
+  padding: 5px 10px;
+  background-color: #4CAF50; /* Cor verde */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cancelar-consulta-button:hover {
+  background-color: #45a049; /* Cor verde escuro para hover */
+}
+
+.icon-separator {
+  margin: 0 10px; /* Ajuste o valor de margin conforme necessário */
+}
+
+.cancelar-consulta-icon,
+.editar-consulta-icon {
+  cursor: pointer;
+  margin-right: 5px; /* Ajuste o espaçamento direito conforme necessário */
+}

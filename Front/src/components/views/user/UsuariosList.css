@@ -1,0 +1,39 @@
+// UsuariosList.css
+.usuarios-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.usuarios-table th,
+.usuarios-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.usuarios-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.criar-usuario-button-container {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.criar-usuario-button {
+  display: block;
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.criar-usuario-button:hover {
+  background-color: darkgreen;
+}

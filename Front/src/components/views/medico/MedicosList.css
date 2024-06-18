@@ -1,0 +1,27 @@
+/* MedicosList.css */
+.medicos-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.medicos-table th,
+.medicos-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.medicos-table th {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.medicos-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.medicos-table tr:hover {
+  background-color: #f1f1f1;
+}

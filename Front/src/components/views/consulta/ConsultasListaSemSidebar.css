@@ -1,0 +1,25 @@
+.logout-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Alinha os itens à direita */
+  margin-bottom: 10px; /* Espaçamento opcional entre o botão e a tabela */
+}
+
+.logout-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.login-link {
+  color: #1976d2;
+  cursor: pointer;
+}
+
+.medico-button-container {
+  display: inline-block;
+  margin-bottom: 20px;
+  }

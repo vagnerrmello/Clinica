@@ -1,0 +1,59 @@
+/* src/styles.css */
+
+/* Estilizando o body para centralizar o conteúdo */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Cor de fundo do corpo */
+}
+
+/* Estilizando a caixa de login */
+.login-container {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff; /* Cor de fundo da caixa de login */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: center; /* Centralizando o conteúdo dentro da caixa */
+}
+
+/* Estilizando o título "Login" */
+.login-container h1 {
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilizando os campos de input */
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box; /* Garantindo que o padding não aumente o tamanho total */
+}
+
+/* Estilizando o botão de login */
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db; /* Cor de fundo do botão */
+  color: #ffffff; /* Cor do texto do botão */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.login-container button:hover {
+  background-color: #2980b9; /* Cor de fundo ao passar o mouse */
+}
+
+.checkbox-container {
+  margin-bottom: 20px;
+}
+
