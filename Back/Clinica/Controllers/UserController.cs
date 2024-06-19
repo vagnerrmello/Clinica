@@ -1,11 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Threading.Tasks;
-using Clinica.Dominio.Entidades;
-using Clinica.Infra;
+﻿using Clinica.Dominio.Entidades;
 using Clinica.Infra.Interface;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 
 namespace Clinica.Web.Controllers

@@ -49,7 +49,7 @@ body, html {
 .login-button {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color:  e5f8e5;
   color: white;
   border: none;
   border-radius: 5px;
@@ -57,7 +57,7 @@ body, html {
 }
 
 .login-button:hover {
-  background-color: #0056b3;
+  background-color:  99e599;
 }
 
 .error-message {

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
-using Moq;
-using Xunit;
-using Clinica.Controllers;
-using Microsoft.AspNetCore.Mvc;
+﻿using Clinica.Dominio.Entidades;
 using Clinica.Infra.Interface;
-using Clinica.Dominio.Entidades;
 using Clinica.Web.Controllers;
+using Microsoft.AspNetCore.Mvc;
+using Moq;
+using System.Threading.Tasks;
+using Xunit;
 
 public class UserControllerTests
 {
@@ -49,7 +47,7 @@ public class UserControllerTests
 
         // Assert
         var okResult = Assert.IsType<OkObjectResult>(result.Result);
-        var returnValue = Assert.IsType<dynamic>(okResult.Value);
+        dynamic returnValue = okResult.Value;
 
         Assert.Equal("/welcome", returnValue.redirectUrl);
         Assert.Equal("Usuário Teste", returnValue.usuario.Nome);

@@ -1,9 +1,8 @@
 ﻿using Clinica.Dominio.DTOs;
 using Clinica.Dominio.Entidades;
 using Clinica.Infra.Interface;
-using Clinica.Infra.Repository;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace Clinica.Web.Controllers
 {
