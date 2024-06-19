@@ -1,3 +1,4 @@
+// App.tsx
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
@@ -18,6 +19,7 @@ import EditPaciente from './components/views/paciente/EditPaciente';
 import MedicosList from './components/views/medico/MedicosList';
 import CreateMedico from './components/views/medico/CreateMedico';
 import EditMedico from './components/views/medico/EditMedico';
+import PrivateRoute from './PrivateRoute';
 
 const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -40,27 +42,21 @@ const App: React.FC = () => {
         <div className="content">
           <Routes>
             <Route path="/login" element={<Login onLogin={handleLogin} />} />
-            {isLoggedIn ? (
-              <>
-                <Route path="/welcome" element={<Welcome />} />
-                <Route path="/schedule" element={<ScheduleAppointment />} />
-                <Route path="/consultas" element={<ConsultasList />} />
-                <Route path="/edit-consulta/:id" element={<EditConsulta />} />
-                <Route path="/consultasmedico" element={<ConsultasListaSemSidebar />} />
-                <Route path="/" element={<Navigate to="/welcome" />} />
-                <Route path="/users" element={<UsuariosList />} />
-                <Route path="/create-user" element={<CreateUser />} />	
-                <Route path="/edit-user/:id" element={<EditedUser />} />
-                <Route path="/pacientes" element={<PacientesList />} />
-                <Route path="/add-paciente" element={<AddPaciente />} />
-                <Route path="/edit-paciente/:id" element={<EditPaciente />} />
-                <Route path="/medicos" element={<MedicosList />} />
-                <Route path="/create-medico" element={<CreateMedico />} />
-                <Route path="/EditMedico/:id" element={<EditMedico />} />
-              </>
-            ) : (
-              <Route path="/" element={<Navigate to="/login" />} />
-            )}
+            <Route path="/" element={isLoggedIn ? <Navigate to="/welcome" /> : <Navigate to="/login" />} />
+            <Route path="/welcome" element={<PrivateRoute isAuthenticated={isLoggedIn} element={<Welcome />} />} />
+            <Route path="/schedule" element={<PrivateRoute isAuthenticated={isLoggedIn} element={<ScheduleAppointment />} />} />
+            <Route path="/consultas" element={<PrivateRoute isAuthenticated={isLoggedIn} element={<ConsultasList />} />} />
+            <Route path="/edit-consulta/:id" element={<PrivateRoute isAuthenticated={isLoggedIn} element={<EditConsulta />} />} />
+            <Route path="/consultasmedico" element={<PrivateRoute isAuthenticated={isLoggedIn} element={<ConsultasListaSemSidebar />} />} />
+            <Route path="/users" element={<PrivateRoute isAuthenticated={isLoggedIn} element={<UsuariosList />} />} />
+            <Route path="/create-user" element={<PrivateRoute isAuthenticated={isLoggedIn} element={<CreateUser />} />} />
+            <Route path="/edit-user/:id" element={<PrivateRoute isAuthenticated={isLoggedIn} element={<EditedUser />} />} />
+            <Route path="/pacientes" element={<PrivateRoute isAuthenticated={isLoggedIn} element={<PacientesList />} />} />
+            <Route path="/add-paciente" element={<PrivateRoute isAuthenticated={isLoggedIn} element={<AddPaciente />} />} />
+            <Route path="/edit-paciente/:id" element={<PrivateRoute isAuthenticated={isLoggedIn} element={<EditPaciente />} />} />
+            <Route path="/medicos" element={<PrivateRoute isAuthenticated={isLoggedIn} element={<MedicosList />} />} />
+            <Route path="/create-medico" element={<PrivateRoute isAuthenticated={isLoggedIn} element={<CreateMedico />} />} />
+            <Route path="/edit-medico/:id" element={<PrivateRoute isAuthenticated={isLoggedIn} element={<EditMedico />} />} />
           </Routes>
         </div>
       </div>
